@@ -1,0 +1,51 @@
+{
+    "name": "iaa/shopping-basket",
+    "description": "An easy-to-use shopping basket for Laravel",
+    "keywords": [
+        "iaa",
+        "shopping-basket",
+        "laravel"
+    ],
+    "homepage": "https://github.com/iaa/shopping-basket",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Avraham Appel",
+            "email": "avraham@bomshteyn.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "ext-json": "*",
+        "illuminate/config": "^6.0|^7.0|^8.0",
+        "illuminate/database": "^6.20.12|^7.30.4|^8.22.1",
+        "illuminate/support": "^6.0|^7.0|^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0|^5.0|^6.0",
+        "phpunit/phpunit": "^8.0|^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Iaa\\ShoppingBasket\\": "src"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Iaa\\ShoppingBasket\\BasketServiceProvider"
+            ],
+            "aliases": {
+                "Basket": "Iaa\\ShoppingBasket\\Facades\\Basket"
+            }
+        }
+    }
+}
